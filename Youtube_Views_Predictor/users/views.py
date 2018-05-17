@@ -19,10 +19,9 @@ def DashBoard(request):
         User_Detail = user1
         video_main_obj = video_main.objects.filter(user_id=user1.pk)
         video_sub_obj = video_sub.objects.filter(video_main_id__in=video_main_obj).order_by("-date1", "video_main_id")
-        channel_main_obj = user_channel_main.objects.filter(user_id=user1.pk)
+        channel_main_obj = user_channel_main.objects.filter(user_id=user1.pk).order_by("-id")
         # print(channel_main_obj)
-        channel_sub_obj = user_channel_sub.objects.filter(channel_id__in=channel_main_obj).order_by("-date1",
-                                                                                                    "channel_id_id")
+        channel_sub_obj = user_channel_sub.objects.filter(channel_id__in=channel_main_obj).order_by("-date1","channel_id_id")
         # print(channel_sub_obj)
         channel_obj = zip(channel_main_obj, channel_sub_obj)
         video_obj = zip(video_main_obj, video_sub_obj)

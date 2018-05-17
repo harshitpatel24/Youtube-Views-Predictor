@@ -119,9 +119,12 @@ def get_video_details(V_id,name,type,url1,request):
     like_count = data['likeCount']
     dislike_count = data['dislikeCount']
     publish_date = data['publishedAt']
-    category_no =data['categoryId']
-    category = category_dict[int(category_no[0])]
-    print(view_count,like_count,dislike_count,publish_date[0][:10],category)
+    try:
+        category_no =data['categoryId']
+        category = category_dict[int(category_no[0])]
+    except:
+        category='NA'
+    #print(view_count,like_count,dislike_count,publish_date[0][:10],category)
     try:
         getobj=video_main.objects.get(youtube_url=url1,user_id=users.objects.get(pk=request.session['User_Id']))
         getobj1=video_sub.objects.get(video_main_id=getobj,date1=datetime.now().strftime('%Y-%m-%d'))
