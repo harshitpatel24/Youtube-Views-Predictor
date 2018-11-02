@@ -1,7 +1,7 @@
 ﻿certifi==2018.1.18
 chardet==3.0.4
 crypto==1.4.1
-Django==2.0.2
+Django==2.0.8
 idna==2.6
 Naked==0.1.31
 numpy==1.14.2
@@ -11,7 +11,7 @@ psycopg2==2.7.4
 python-dateutil==2.7.2
 pytz==2018.3
 PyYAML==3.12
-requests==2.18.4
+requests==2.20.0
 selenium==3.11.0
 shellescape==3.4.1
 six==1.11.0
