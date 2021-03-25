@@ -10,7 +10,7 @@ pickleshare==0.7.4
 psycopg2==2.7.4
 python-dateutil==2.7.2
 pytz==2018.3
-PyYAML==3.12
+PyYAML==5.4
 requests==2.20.0
 selenium==3.11.0
 shellescape==3.4.1
